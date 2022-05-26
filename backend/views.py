@@ -12,3 +12,6 @@ class Products(TemplateView):
 
 class OurService(TemplateView):
     template_name = 'service.html'
+
+class Contact(TemplateView):
+    template_name = 'contact-us.html'
