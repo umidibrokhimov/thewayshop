@@ -16,3 +16,12 @@ class HomeCategories(models.Model):
     
     image = models.ImageField()
     title = models.CharField(max_length=5)
+
+class Blog(models.Model):
+    class Meta:
+        verbose_name = 'Blog'
+        verbose_name_plural = 'Blog posts'
+    
+    title = models.CharField(max_length=20)
+    description = models.TextField()
+    image = models.ImageField()
