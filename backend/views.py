@@ -6,3 +6,6 @@ class Home(TemplateView):
 
 class About(TemplateView):
     template_name = 'about.html'
+
+class Products(TemplateView):
+    template_name = 'shop.html'
