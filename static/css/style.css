@@ -1144,7 +1144,7 @@
      -moz-transition: all 0.3s ease-out 0.5s;
      -o-transition: all 0.3s ease-out 0.5s;
      -ms-transition: all 0.3s ease-out 0.5s;
-     transition: all 0.3s ease-out 0.5s;
+     transition: all 0.3s ease-in 0.2s;
      text-align: center;
      display: table;
 }
@@ -2395,26 +2395,3 @@
      vertical-align: middle;
      white-space: nowrap;
 }
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
