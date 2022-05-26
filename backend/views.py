@@ -9,3 +9,6 @@ class About(TemplateView):
 
 class Products(TemplateView):
     template_name = 'shop.html'
+
+class OurService(TemplateView):
+    template_name = 'service.html'
