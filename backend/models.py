@@ -1,4 +1,3 @@
-from unicodedata import name
 from django.db import models
 
 class HomeSlides(models.Model):
@@ -51,6 +50,10 @@ class Products(models.Model):
     description = models.TextField()
     image = models.ImageField()
     price = models.IntegerField()
+    is_sale = models.BooleanField(default=False)
+    is_new = models.BooleanField(default=False)
+    type_clothe = models.ForeignKey('Categories', on_delete=models.CASCADE, null=True, blank=True)
+    brand_clothe = models.ForeignKey('BrandCategories', on_delete=models.CASCADE, null=True, blank=True)
 
 # Categories model
 class Categories(models.Model):
@@ -61,12 +64,12 @@ class Categories(models.Model):
     name = models.CharField(max_length=20)
 
 # Products categories model
-class ProductCategories(models.Model):
-    class Meta:
-        verbose_name = 'Product Category'
-        verbose_name_plural = 'Product Categories'
+# class ProductCategories(models.Model):
+#     class Meta:
+#         verbose_name = 'Product Category'
+#         verbose_name_plural = 'Product Categories'
     
-    name = models.CharField(max_length=20)
+#     name = models.CharField(max_length=20)
 
 # Brand categories
 class BrandCategories(models.Model):
