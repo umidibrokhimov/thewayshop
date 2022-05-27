@@ -9,6 +9,9 @@ class HomeSlides(models.Model):
     description = models.TextField()
     image = models.ImageField()
 
+    def __str__(self):
+        return self.title
+
 class HomeCategories(models.Model):
     class Meta():
         verbose_name = 'Category'
@@ -16,6 +19,9 @@ class HomeCategories(models.Model):
     
     image = models.ImageField()
     title = models.CharField(max_length=5)
+
+    def __str__(self):
+        return self.title
 
 class Blog(models.Model):
     class Meta:
@@ -25,6 +31,9 @@ class Blog(models.Model):
     title = models.CharField(max_length=20)
     description = models.TextField()
     image = models.ImageField()
+
+    def __str__(self): 
+        return self.title
 
 class TeamMembers(models.Model):
     class Meta:
@@ -39,6 +48,9 @@ class TeamMembers(models.Model):
     tr_account = models.URLField(max_length=20, null=True, blank=True)
     gl_account = models.URLField(max_length=20, null=True, blank=True)
     yt_account = models.URLField(max_length=20, null=True, blank=True)
+
+    def __str__(self):
+        return self.name
 
 # Products model
 class Products(models.Model):
@@ -55,6 +67,9 @@ class Products(models.Model):
     type_clothe = models.ForeignKey('Categories', on_delete=models.CASCADE, null=True, blank=True)
     brand_clothe = models.ForeignKey('BrandCategories', on_delete=models.CASCADE, null=True, blank=True)
 
+    def __str__(self):
+        return self.title
+
 # Categories model
 class Categories(models.Model):
     class Meta:
@@ -63,13 +78,9 @@ class Categories(models.Model):
     
     name = models.CharField(max_length=20)
 
-# Products categories model
-# class ProductCategories(models.Model):
-#     class Meta:
-#         verbose_name = 'Product Category'
-#         verbose_name_plural = 'Product Categories'
-    
-#     name = models.CharField(max_length=20)
+    def __str__(self):
+        return self.name
+
 
 # Brand categories
 class BrandCategories(models.Model):
@@ -78,3 +89,6 @@ class BrandCategories(models.Model):
         verbose_name_plural = 'Brand Categories'
     
     name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
