@@ -1,7 +1,10 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
+from .models import *
 
-class Home(TemplateView):
+class Home(ListView):
+    context_object_name = 'categories'
+    queryset = Categories.objects.all()
     template_name = 'index.html'
 
 class About(TemplateView):
