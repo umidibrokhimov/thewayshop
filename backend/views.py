@@ -7,7 +7,9 @@ class Home(ListView):
     queryset = Categories.objects.all()
     template_name = 'index.html'
 
-class About(TemplateView):
+class About(ListView):
+    context_object_name = 'teammembers'
+    queryset = TeamMembers.objects.all()
     template_name = 'about.html'
 
 class Products(TemplateView):
