@@ -1,6 +1,6 @@
 from django.db import models
 
-class HomeSlides(models.Model):
+class HomeSlides(models.Model): # Used
     class Meta():
         verbose_name = 'Slide'
         verbose_name_plural = 'Home Slides'
@@ -35,7 +35,7 @@ class Blog(models.Model):
     def __str__(self): 
         return self.title
 
-class TeamMembers(models.Model):
+class TeamMembers(models.Model): # Used
     class Meta:
         verbose_name = 'Team Member'
         verbose_name_plural = 'Team Members'
@@ -71,7 +71,7 @@ class Products(models.Model):
         return self.title
 
 # Categories model
-class Categories(models.Model):
+class Categories(models.Model): # Used
     class Meta:
         verbose_name = 'Category'
         verbose_name_plural = 'Categories'

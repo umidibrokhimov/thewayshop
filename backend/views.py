@@ -14,6 +14,7 @@ class Home(ListView):
         context = super(Home, self).get_context_data(**kwargs)
         # here we can add so many context using that way
         context['slides'] = HomeSlides.objects.all()
+        context['blogs'] = Blog.objects.all()
         return context
 
 
