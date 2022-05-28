@@ -23,7 +23,9 @@ class About(ListView):
     queryset = TeamMembers.objects.all()
     template_name = 'about.html'
 
-class Products(TemplateView):
+class Products(ListView):
+    context_object_name = 'products'
+    queryset = Products.objects.all()
     template_name = 'shop.html'
 
 class OurService(TemplateView):
