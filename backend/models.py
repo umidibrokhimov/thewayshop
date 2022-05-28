@@ -53,7 +53,7 @@ class TeamMembers(models.Model): # Used
         return self.name
 
 # Products model
-class Products(models.Model):
+class Products(models.Model): # Used
     class Meta:
         verbose_name = 'Product'
         verbose_name_plural = 'Products'
