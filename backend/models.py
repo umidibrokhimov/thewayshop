@@ -66,6 +66,7 @@ class Products(models.Model): # Used
     is_new = models.BooleanField(default=False)
     type_clothe = models.ForeignKey('Categories', on_delete=models.CASCADE, null=True, blank=True)
     brand_clothe = models.ForeignKey('BrandCategories', on_delete=models.CASCADE, null=True, blank=True)
+    is_top = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
