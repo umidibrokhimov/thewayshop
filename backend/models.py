@@ -12,18 +12,7 @@ class HomeSlides(models.Model): # Used
     def __str__(self):
         return self.title
 
-class HomeCategories(models.Model):
-    class Meta():
-        verbose_name = 'Category'
-        verbose_name_plural = 'Home Categories'
-    
-    image = models.ImageField()
-    title = models.CharField(max_length=5)
-
-    def __str__(self):
-        return self.title
-
-class Blog(models.Model):
+class Blog(models.Model): # Used
     class Meta:
         verbose_name = 'Blog'
         verbose_name_plural = 'Blog posts'
@@ -85,7 +74,7 @@ class Categories(models.Model): # Used
 
 
 # Brand categories
-class BrandCategories(models.Model):
+class BrandCategories(models.Model): # Used
     class Meta:
         verbose_name = 'Brand Category'
         verbose_name_plural = 'Brand Categories'

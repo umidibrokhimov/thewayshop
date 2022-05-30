@@ -37,7 +37,9 @@ class ProductsList(ListView):
         context['products'] = Products.objects.all()
         return context
 
-class OurService(TemplateView):
+class OurService(ListView):
+    context_object_name = 'members'
+    queryset = TeamMembers.objects.all()
     template_name = 'service.html'
 
 class Contact(TemplateView):

@@ -4,7 +4,6 @@ from .models import *
 # Register your models here.
 admin.site.register(TeamMembers)
 admin.site.register(HomeSlides)
-admin.site.register(HomeCategories)
 admin.site.register(Blog)
 admin.site.register(Products)
 admin.site.register(Categories)
