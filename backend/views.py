@@ -1,5 +1,5 @@
 from django.shortcuts import reverse
-from django.views.generic import TemplateView, ListView, CreateView
+from django.views.generic import TemplateView, ListView, CreateView, DetailView
 from .forms import *
 from .models import *
 
@@ -53,3 +53,8 @@ class OurService(ListView):
 
 class Contact(TemplateView):
     template_name = 'contact-us.html'
+
+class UserAccount(DetailView):
+    queryset = User.objects.all()
+    context_object_name = 'user'
+    template_name = 'my-account.html'

@@ -48,10 +48,10 @@
                 <div class="our-link">
                     <ul>
                         {% if request.user.is_authenticated %}
-                        <li><a href="#">{{ request.user.username }}</a></li>
+                        <li><a href="{% url 'backend:account' user.pk %}">{{ request.user.username }}</a></li>
                         <li><a href="{% url 'logout' %}">Log out</a></li>
                         {% else %}
-                        <li><a href="#">Sign up</a></li>
+                        <li><a href="{% url 'signup' %}">Sign up</a></li>
                         <li><a href="{% url 'login' %}">Log in</a></li>
                         {% endif %}
                     </ul>
