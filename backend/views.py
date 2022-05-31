@@ -16,6 +16,7 @@ class Home(ListView):
         context['slides'] = HomeSlides.objects.all()
         context['products'] = Products.objects.filter(is_top=True)
         context['blogs'] = Blog.objects.all()
+        context['product_categories'] = Categories.objects.all()
         return context
 
 

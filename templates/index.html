@@ -20,18 +20,6 @@
                 </div>
             </div>
         </li>
-        <li class="text-center">
-            <img src="{{banner.image.url}}" alt="">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1 class="m-b-20">{{banner.title}}</h1>
-                        <p class="m-b-40">{{banner.description}}</p>
-                        <p><a class="btn hvr-hover" href="#">Shop New</a></p>
-                    </div>
-                </div>
-            </div>
-        </li>
         {% endfor %}
     </ul>
     <div class="slides-navigation">
@@ -45,7 +33,7 @@
 <div class="categories-shop">
     <div class="container">
         <div class="row">
-            {% for category in categories %}
+            {% for category in product_categories %}
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="shop-cat-box">
                     <img class="img-fluid" src="{{category.image.url}}" alt="{{ category.name }}" />

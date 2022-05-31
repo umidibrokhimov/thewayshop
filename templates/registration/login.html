@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
+{% block title %} Login - ThewayShop {% endblock title %}
 {% block content %}
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button>Submit</button>
 </form>
-{% endblock %}
+{% endblock content %}
