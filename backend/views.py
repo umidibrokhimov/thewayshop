@@ -1,6 +1,14 @@
-from django.shortcuts import render
-from django.views.generic import TemplateView, ListView
+from django.shortcuts import reverse
+from django.views.generic import TemplateView, ListView, CreateView
+from .forms import *
 from .models import *
+
+class RegistrationView(CreateView):
+    form_class = CreationForm
+    template_name = 'registration/signup.html'
+
+    def get_success_url(self):
+        return reverse('login')
 
 class Home(ListView):
     context_object_name = 'categories'

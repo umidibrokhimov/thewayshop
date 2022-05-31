@@ -1,4 +1,9 @@
 from django.db import models
+# importing abstract user model
+from django.contrib.auth.models import AbstractUser
+
+class User(AbstractUser):
+    pass
 
 class HomeSlides(models.Model): # Used
     class Meta():
