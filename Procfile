@@ -1,0 +1,1 @@
+web: gunicorn thewayshop.wsgi --log-file -
