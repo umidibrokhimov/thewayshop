@@ -22,7 +22,7 @@ SECRET_KEY = '521#_+*kz8s9q*92%vt=qrpl#0*_0b52@uk@%)p@r0s!rl$d'
 
 
 
-ALLOWED_HOSTS = ['127.0.0.1', 'herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'thewayshop-crm.herokuapp.com']
 
 
 # Application definition
