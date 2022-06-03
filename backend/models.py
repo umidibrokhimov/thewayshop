@@ -10,7 +10,7 @@ class HomeSlides(models.Model): # Used
         verbose_name = 'Slide'
         verbose_name_plural = 'Home Slides'
     
-    title = models.CharField(max_length=20)
+    title = models.CharField(max_length=50)
     description = models.TextField()
     image = models.ImageField()
 
@@ -22,7 +22,7 @@ class Blog(models.Model): # Used
         verbose_name = 'Blog'
         verbose_name_plural = 'Blog posts'
     
-    title = models.CharField(max_length=20)
+    title = models.CharField(max_length=50)
     description = models.TextField()
     image = models.ImageField()
 
@@ -52,7 +52,7 @@ class Products(models.Model): # Used
         verbose_name = 'Product'
         verbose_name_plural = 'Products'
     
-    title = models.CharField(max_length=20)
+    title = models.CharField(max_length=50)
     description = models.TextField()
     image = models.ImageField()
     price = models.IntegerField()
