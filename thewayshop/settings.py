@@ -74,15 +74,15 @@ WSGI_APPLICATION = 'thewayshop.wsgi.application'
 
 DATABASES = {
     'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
 
-    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'dct5nrejrn8kvo',
-    'USER': 'eshmzszpbhnpnf',
-    'PASSWORD': '6ddc39c92bf00ea7b1c20132bfc7c4dd76db536fdc7da44e3f899d26cefc095b',
-    'HOST': 'ec2-3-234-131-8.compute-1.amazonaws.com',
-    'PORT': '5432',
+    # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    # 'NAME': 'dct5nrejrn8kvo',
+    # 'USER': 'eshmzszpbhnpnf',
+    # 'PASSWORD': '6ddc39c92bf00ea7b1c20132bfc7c4dd76db536fdc7da44e3f899d26cefc095b',
+    # 'HOST': 'ec2-3-234-131-8.compute-1.amazonaws.com',
+    # 'PORT': '5432',
     }
 }
 
