@@ -80,3 +80,8 @@ class ProductCheckout(TemplateView):
     context_object_name = 'product'
     queryset = Products.objects.all()
     template_name = 'checkout.html'
+
+class Wishlist(TemplateView):
+    # context_object_name = 'product'
+    # queryset = Products.objects.all()
+    template_name = 'wishlist.html'
