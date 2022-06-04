@@ -152,7 +152,9 @@
                                                 </div>
                                             </div>
                                             <div class="why-text">
-                                                <h4>{{product.title}}</h4>
+                                                <a href="{% url 'backend:product_detail' product.pk %}">
+                                                    <h4>{{product.title}}</h4>
+                                                </a>
                                                 <h5>${{product.price}}</h5>
                                             </div>
                                         </div>
@@ -192,24 +194,24 @@
                                                 <h4>{{product.title}}</h4>
                                                 <h5>${{product.price}}</h5>
                                                 <p>{{product.description}}</p>
-                                                    <a class="btn hvr-hover" href="#">Add to Cart</a>
-                                                </div>
+                                                <a class="btn hvr-hover" href="#">Add to Cart</a>
                                             </div>
                                         </div>
                                     </div>
-                                    {% endfor %}
                                 </div>
+                                {% endfor %}
                             </div>
                         </div>
-                        
                     </div>
+                    
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Shop Page -->
-    
-    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
-    
-    
-    {% endblock content %}
+</div>
+<!-- End Shop Page -->
+
+<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+
+{% endblock content %}
