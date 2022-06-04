@@ -75,3 +75,8 @@ class ProductDetail(DetailView):
         # here we can add so many context using that way
         context['products'] = Products.objects.all()
         return context
+
+class ProductCheckout(TemplateView):
+    context_object_name = 'product'
+    queryset = Products.objects.all()
+    template_name = 'checkout.html'
