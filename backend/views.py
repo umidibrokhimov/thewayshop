@@ -58,3 +58,6 @@ class UserAccount(DetailView):
     queryset = User.objects.all()
     context_object_name = 'user'
     template_name = 'my-account.html'
+
+class ProductCart(TemplateView):
+    template_name = 'cart.html'
