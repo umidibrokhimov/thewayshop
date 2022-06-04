@@ -61,3 +61,17 @@ class UserAccount(DetailView):
 
 class ProductCart(TemplateView):
     template_name = 'cart.html'
+
+class ProductDetail(DetailView):
+    context_object_name = 'product'
+    queryset = Products.objects.all()
+    template_name = 'shop-detail.html'
+
+    def get_queryset(self):
+        return Products.objects.all()
+
+    def get_context_data(self, **kwargs):
+        context = super(ProductDetail, self).get_context_data(**kwargs)
+        # here we can add so many context using that way
+        context['products'] = Products.objects.all()
+        return context

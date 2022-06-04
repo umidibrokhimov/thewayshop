@@ -14,5 +14,6 @@ urlpatterns = [
     path('contact/', Contact.as_view(), name='contact'),
     path('cart/', ProductCart.as_view(), name='cart'),
     path('accounts/<int:pk>/', UserAccount.as_view(), name='account'),
+    path('products/<int:pk>/', ProductDetail.as_view(), name='product_datail'),
 
 ]
