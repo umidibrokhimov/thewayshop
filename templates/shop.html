@@ -191,7 +191,9 @@
                                         </div>
                                         <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
                                             <div class="why-text full-width">
-                                                <h4>{{product.title}}</h4>
+                                                <a href="{% url 'backend:product_detail' product.pk %}">
+                                                    <h4>{{product.title}}</h4>
+                                                </a>
                                                 <h5>${{product.price}}</h5>
                                                 <p>{{product.description}}</p>
                                                 <a class="btn hvr-hover" href="#">Add to Cart</a>
