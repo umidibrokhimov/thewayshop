@@ -12,5 +12,6 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name='logout'),
     path('signup/', RegistrationView.as_view(), name='signup'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + i18n_patterns(
+    path('i18n/', include('django.conf.urls.i18n')),
     path('', include('backend.urls'))
 )
