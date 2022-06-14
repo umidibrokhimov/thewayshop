@@ -13,5 +13,6 @@ urlpatterns = [
     path('signup/', RegistrationView.as_view(), name='signup'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + i18n_patterns(
     path('i18n/', include('django.conf.urls.i18n')),
-    path('', include('backend.urls'))
+    path('', include('backend.urls')),
+    prefix_default_language=False
 )
