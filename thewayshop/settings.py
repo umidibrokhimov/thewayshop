@@ -1,4 +1,5 @@
 from pathlib import Path
+from django.utils.translation import gettext_lazy as _
 import environ
 
 env = environ.Env(
@@ -118,6 +119,11 @@ USE_I18N = True
 
 USE_TZ = True
 
+
+LANGUAGES = [
+    ('uz', _('Uzbek')),
+    ('en', _('English')),
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/

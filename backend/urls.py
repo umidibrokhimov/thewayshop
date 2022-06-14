@@ -17,5 +17,4 @@ urlpatterns = [
     path('products/<int:pk>/', ProductDetail.as_view(), name='product_detail'),
     path('check/', ProductCheckout.as_view(), name='product_checkout'),
     path('saved/', Wishlist.as_view(), name='liked_products'),
-
 ]

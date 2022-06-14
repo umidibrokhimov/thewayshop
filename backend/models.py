@@ -1,6 +1,8 @@
 from django.db import models
 # importing abstract user model
 from django.contrib.auth.models import AbstractUser
+from django.urls import reverse
+
 
 class User(AbstractUser):
     pass
