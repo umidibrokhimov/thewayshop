@@ -2,6 +2,7 @@
 {% load static %}
 {% block title %} ThewayShop - Ecommerce Bootstrap 4 HTML Template {% endblock title %}
 {% block content %}
+{% load i18n %}
 
 <!-- Start Slider -->
 <div id="slides-shop" class="cover-slides">
@@ -14,7 +15,7 @@
                     <div class="col-md-12">
                         <h1 class="m-b-20">{{banner.title}}</h1>
                         <p class="m-b-40" style='max-width: 450px; margin: 0 auto;'>{{banner.description}}</p>
-                        <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                        <p><a class="btn hvr-hover" href="#">{% trans "Sotib ol" %}</a></p>
                     </div>
                 </div>
             </div>

@@ -155,4 +155,8 @@ LOGIN_REDIRECT_URL = '/'
 
 LOGOUT_REDIRECT_URL = '/'
 
+LOCALE_PATHS = [
+    BASE_DIR / 'locale'
+]
+
 AUTH_USER_MODEL = 'backend.User'
