@@ -34,19 +34,6 @@ class About(ListView):
     queryset = TeamMembers.objects.all()
     template_name = 'about.html'
 
-class ProductsList(ListView):
-    template_name = 'shop.html'
-
-    def get_queryset(self):
-        return BrandCategories.objects.all()
-
-    def get_context_data(self, **kwargs):
-        context = super(ProductsList, self).get_context_data(**kwargs)
-        # here we can add so many context using that way
-        context['brandcategories'] = BrandCategories.objects.all()
-        context['products'] = Products.objects.all()
-        return context
-
 def ProductsList(request):
     brandcategories = BrandCategories.objects.all()
     category = request.GET.get('brand')
