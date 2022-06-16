@@ -84,11 +84,10 @@
                         <div class="brand-box">
                             <ul>
                                 {% for category in brandcategories %}
-                                <li>
-                                    <div class="radio radio-danger">
-                                        <input name="survey" id="{{category.id}}" value="Yes" type="radio">
-                                        <label for="{{category.id}}"> {{category.name}} </label>
-                                    </div>
+                                <li class="mb-2">
+                                    <a href="{% url 'backend:products' %}?brand={{category.name}}">
+                                        <h5>{{category.name}}</h5>
+                                    </a>
                                 </li>
                                 {% endfor %}
                             </ul>

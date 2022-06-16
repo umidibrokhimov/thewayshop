@@ -1,4 +1,5 @@
-from django.shortcuts import reverse
+from itertools import product
+from django.shortcuts import reverse, render
 from django.views.generic import TemplateView, ListView, CreateView, DetailView
 from .forms import *
 from .models import *
@@ -45,6 +46,20 @@ class ProductsList(ListView):
         context['brandcategories'] = BrandCategories.objects.all()
         context['products'] = Products.objects.all()
         return context
+
+def ProductsList(request):
+    brandcategories = BrandCategories.objects.all()
+    category = request.GET.get('brand')
+    if category == None:
+        products = Products.objects.all()
+    else:
+        products = Products.objects.filter(brand_clothe__name=category)
+
+    context = {
+        "brandcategories": brandcategories,
+        "products": products,
+    }
+    return render(request, 'shop.html', context)
 
 class OurService(ListView):
     context_object_name = 'members'
