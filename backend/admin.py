@@ -8,7 +8,7 @@ admin.site.register(User)
 # admin.site.register(Blog)
 # admin.site.register(Products)
 # admin.site.register(Categories)
-# admin.site.register(BrandCategories)
+admin.site.register(BrandCategories)
 
 @admin.register(HomeSlides)
 class HomeSlidesAdmin(TranslationAdmin):
@@ -31,9 +31,5 @@ class HomeSlidesAdmin(TranslationAdmin):
     pass
 
 @admin.register(Categories)
-class HomeSlidesAdmin(TranslationAdmin):
-    pass
-
-@admin.register(BrandCategories)
 class HomeSlidesAdmin(TranslationAdmin):
     pass

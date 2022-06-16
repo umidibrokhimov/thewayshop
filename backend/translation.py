@@ -20,7 +20,3 @@ class ProductsTranslationOptions(TranslationOptions):
 @register(Categories)
 class CategoriesTranslationOptions(TranslationOptions):
     fields = ('name',)
-
-@register(BrandCategories)
-class BrandCategoriesTranslationOptions(TranslationOptions):
-    fields = ('name',)
